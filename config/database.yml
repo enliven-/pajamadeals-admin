@@ -1,0 +1,25 @@
+default: &default
+  adapter: mysql2
+  host: localhost
+  encoding: utf8
+
+development:
+  <<: *default
+  database: pajama_dev
+  username: root
+  password: 
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *default
+  database: pajama_test
+  username: root
+  password:
+  
+production:
+  <<: *default
+  database: hasstuff_prod
+  username: bhushan
+  password: bhushan
