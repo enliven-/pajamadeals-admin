@@ -1,4 +1,4 @@
-ActiveAdmin.register AcademicYear do
+ActiveAdmin.register Publication do
 
 
   # See permitted parameters documentation:

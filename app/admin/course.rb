@@ -1,5 +1,4 @@
-ActiveAdmin.register Department do
-  
+ActiveAdmin.register Course do
   form do |f|
     f.inputs do
       f.input :name
@@ -7,10 +6,8 @@ ActiveAdmin.register Department do
     end
     
     f.inputs do
-      f.input :courses, as: :check_boxes
+      f.input :semesters, as: :check_boxes
     end
-    
     f.actions
-  end
-
+  end    
 end

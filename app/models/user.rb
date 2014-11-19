@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   has_many :listings
   belongs_to :college
+  belongs_to :department
+  belongs_to :semester
 
   validates :name, presence: true
   validates :mobile_number, presence: true

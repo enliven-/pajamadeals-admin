@@ -31,7 +31,7 @@ ActiveAdmin.setup do |config|
   # will namespace routes to /hello_world/*
   #
   # To set no namespace by default, use:
-  #   config.default_namespace = false
+  config.default_namespace = false
   #
   # Default:
   # config.default_namespace = :admin
@@ -115,7 +115,7 @@ ActiveAdmin.setup do |config|
   # roots for each namespace.
   #
   # Default:
-  # config.root_to = 'dashboard#index'
+  config.root_to = 'dashboard#index'
 
 
   # == Admin Comments
@@ -244,5 +244,9 @@ ActiveAdmin.setup do |config|
   # You can enable or disable them for all resources here.
   #
   # config.filters = true
+  
+  config.before_filter do
+    params.permit!
+  end
 
 end
