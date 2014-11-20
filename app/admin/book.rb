@@ -14,12 +14,15 @@ ActiveAdmin.register Book do
     actions
   end
   
-  form do |f|
+  form html: { multipart: true } do |f|
     f.inputs do
       f.input :title
       f.input :authors
       f.input :mrp, label: 'Price (MRP in Rs)'
-      
+
+      f.has_many :images do |i|
+        i.input :file, as: :file
+      end
       f.input :publication
       f.input :university
       f.input :college

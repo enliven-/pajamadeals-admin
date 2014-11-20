@@ -1,8 +1,9 @@
 class Listing < ActiveRecord::Base
   belongs_to :user
   belongs_to :college
+  belongs_to :book
+  belongs_to :image
 
-  validates :title,   presence: true
   validates :price,   presence: true, numericality: { greater_than: 0 }
   validates :user,    presence: true
   validates :college, presence: true

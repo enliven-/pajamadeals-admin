@@ -8,4 +8,6 @@ class Book < ActiveRecord::Base
   belongs_to :publication
 
   has_many :images
+  accepts_nested_attributes_for :images
+  has_many :listings
 end

@@ -6,11 +6,11 @@ class ImageUploader < CarrierWave::Uploader::Base
   storage :file
 
   def store_dir
-    "public/uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+    "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
   def extension_white_list
-    %w{jpg jpeg png}
+    %w{jpg jpeg png tiff}
   end
 
   version :thumb do
