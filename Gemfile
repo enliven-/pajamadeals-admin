@@ -46,3 +46,10 @@ gem 'mini_magick'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'devise'
 
+# deployment
+gem 'capistrano'
+gem 'capistrano-bundler'
+gem 'capistrano-rails'
+gem 'capistrano-rvm'
+gem "capistrano-db-tasks", require: false
+
