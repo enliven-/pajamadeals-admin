@@ -53,3 +53,5 @@ gem 'capistrano-rails'
 gem 'capistrano-rvm'
 gem "capistrano-db-tasks", require: false
 
+gem 'rails_12factor'
+
