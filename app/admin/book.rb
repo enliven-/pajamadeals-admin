@@ -11,6 +11,12 @@ ActiveAdmin.register Book do
     column :department
     column :college
     
+    column "Images" do |m|
+      m.images.map do |img|
+        image_tag(img.file.thumb.url.try(:html_safe))
+      end
+    end
+    
     actions
   end
   
