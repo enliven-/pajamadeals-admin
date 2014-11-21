@@ -7,6 +7,7 @@ lock '3.2.1'
 set :rails_env, 'production'
 
 set :application, 'pajamadeals-admin'
+set :deploy_user, 'deploy'
 set :repo_url, 'git@github.com:enliven-/pajamadeals-admin.git'
 set :deploy_via, :copy
 set :ssh_options, { forward_agent: true, port: 384 }
