@@ -1,5 +1,5 @@
 require 'capistrano-db-tasks'
-SSHKit.config.command_map[:rake] = "bundle exec rake"
+#SSHKit.config.command_map[:rake] = "bundle exec rake"
 
 # config valid only for Capistrano 3.1
 lock '3.2.1'
@@ -10,7 +10,6 @@ set :application, 'pajamadeals-admin'
 set :repo_url, 'git@github.com:enliven-/pajamadeals-admin.git'
 set :deploy_via, :copy
 set :ssh_options, { forward_agent: true, port: 384 }
-
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
