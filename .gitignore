@@ -16,7 +16,6 @@ resources/
 .ruby-gemset
 .elasticbeanstalk/
 .bundle/
-deploy
 db/*.sql.gz
 db/*.sql
 db/*.sql.bkp
