@@ -46,8 +46,13 @@ ActiveAdmin.register Order do
       end
     end
     column :created_at
-    
-    actions
+    actions defaults: true do |order|
+      if !order.handler_assigned?
+        link_to 'Assign to Yourself', order_path(order, order: { handler_id: current_admin_user.id, status: 'handler assigned' } ), method: :put
+      else
+        link_to 'Unassign', order_path(order, order: { handler_id: nil, status: 'order placed' } ), method: :put
+      end
+    end
   end
   
   filter :college
@@ -68,8 +73,44 @@ ActiveAdmin.register Order do
       f.input :payment_deposited
       f.input :payment_deposited_at, as: :datetime_picker
     end
-    
+
     f.actions
+  end
+  
+  show do
+    attributes_table do
+      row :created_at
+      row(:status) do |record|
+        case record.status
+        when 'order placed'
+          status_tag("No Handler", "red")
+        when 'item delivered'
+          status_tag("completed" ,"ok")
+        when 'cancelled'
+          status_tag("cancelled")
+        else
+          status_tag(record.status, "orange")
+        end
+      end
+      row :listing
+      row "Price" do |order|
+        order.listing.price
+      end
+      row :seller
+      row "Contact (seller)" do |order|
+        order.seller.mobile
+      end
+      row :buyer
+      row "Contact (buyer)" do |order|
+        order.buyer.mobile
+      end
+      
+      row :seller_meeting_at
+      row :buyer_meeting_at
+      row "payment_deposited" do |order|
+        order.payment_deposited? ? status_tag("Yes") : status_tag("No")
+      end
+    end
   end
 
 end
