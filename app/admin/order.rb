@@ -1,14 +1,24 @@
 ActiveAdmin.register Order do
-
-  controller do
-    actions :all, except: [:destroy]
+  config.batch_actions = false
+  config.sort_order = "status_asc"
     
+  controller do
+    actions :all, except: [:destroy, :new]
+    
+    def scoped_collection
+      Order.where(college_id: current_admin_user.college_id).where("status = ? OR handler_id = ?", 0, current_admin_user.id)
+    end
+
     def update
       status = params[:order][:status]
       order = Order.find(params[:id])
-      attribute = (status + ' at').gsub(/\s+/, '_').to_sym
-      params[:order][attribute] = Time.now if order.respond_to?(attribute)
-      super
+      if order.status != status
+        attribute = (status + ' at').gsub(/\s+/, '_').to_sym
+        params[:order][attribute] = Time.now if order.respond_to?(attribute)
+      end
+      super do |format|
+        redirect_to orders_path and return if resource.valid?
+      end
     end
   end
   
@@ -31,7 +41,6 @@ ActiveAdmin.register Order do
       line += content_tag(:div) { "+91 " + order.buyer.mobile }
       line
     end
-    column :handler
     
     column(:status) do |record|
       case record.status
@@ -45,6 +54,7 @@ ActiveAdmin.register Order do
         status_tag(record.status, "orange")
       end
     end
+    column "Last Updated At", :updated_at
     column :created_at
     actions defaults: true do |order|
       if !order.handler_assigned?
@@ -54,9 +64,7 @@ ActiveAdmin.register Order do
       end
     end
   end
-  
-  filter :college
-  filter :handler
+
   filter :status, as: :select, collection: Order.statuses.keys
   filter :created_at
   
