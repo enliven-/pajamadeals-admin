@@ -5,7 +5,24 @@ class Order < ActiveRecord::Base
   belongs_to :buyer,   class_name: 'User'
   belongs_to :handler, class_name: 'AdminUser'
 
-  enum status: { created: 0, in_process: 1, completed: 2, canceled: 3 }
+  enum status: {
+                "order placed" =>     0,
+                "handler assigned" => 1,
+                "seller confirmed" => 2,
+                "buyer confirmed" =>  3,
+                "item picked" =>      4,
+                "payment pending" =>  5,
+                "item delivered" =>   6,
+                "order cancelled" =>  7
+               }
+
+  def order_placed?
+    status == "order placed"
+  end
+
+  def handler_assigned?
+    status == "handler assigned"
+  end
 
   private
   before_create :set_college
