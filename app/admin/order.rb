@@ -5,9 +5,24 @@ ActiveAdmin.register Order do
   end
   
   index do    
-    column :listing
-    column :seller
-    column :buyer
+    column "Listing" do |order|
+      line = ''.html_safe
+      line += content_tag(:div) { link_to order.listing.title, listing_path(order.listing) }
+      line += content_tag(:div) { "Price: Rs. " + order.listing.price }
+      line
+    end
+    column "Seller" do |order|
+      line = ''.html_safe
+      line += content_tag(:div) { link_to order.seller.name, user_path(order.seller) }
+      line += content_tag(:div) { "+91 " + order.seller.mobile }
+      line
+    end
+    column "Buyer" do |order|
+      line = ''.html_safe
+      line += content_tag(:div) { link_to order.buyer.name, user_path(order.buyer) }
+      line += content_tag(:div) { "+91 " + order.buyer.mobile }
+      line
+    end
     column :handler
     
     column(:status) do |record|
