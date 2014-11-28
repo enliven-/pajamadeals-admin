@@ -69,8 +69,10 @@ ActiveAdmin.register Order do
   filter :created_at
   
   form do |f|
-    f.inputs do 
-      f.input :status, as: :select, collection: Order.statuses.keys, include_blank: false
+    statuses = Order.statuses.keys
+    statuses.shift(Order.statuses[f.object.status])
+    f.inputs do
+      f.input :status, as: :select, collection: statuses, include_blank: false
       f.input :seller_meeting_at, as: :datetime_picker
       f.input :buyer_meeting_at, as: :datetime_picker
       f.input :item_picked_at, as: :datetime_picker
