@@ -5,4 +5,5 @@ class AdminUser < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
          
   has_many :orders
+  belongs_to :college
 end
