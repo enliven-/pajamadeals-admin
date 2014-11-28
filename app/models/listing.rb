@@ -2,11 +2,16 @@ class Listing < ActiveRecord::Base
   belongs_to :user
   belongs_to :college
   belongs_to :book
+  accepts_nested_attributes_for :book
   belongs_to :image
+  has_many :orders
 
   validates :price,   presence: true, numericality: { greater_than: 0 }
   validates :user,    presence: true
-  validates :college, presence: true
+  # validates :college, presence: true, on: :create
+
+  delegate :title, :authors, :mrp, :department, :semester, :subject,
+           :publication, to: :book
 
   extend CarrierWave::Mount
   mount_uploader :image, ImageUploader
@@ -21,14 +26,18 @@ class Listing < ActiveRecord::Base
     data[:title]         = title
     data[:description]   = description
     data[:price]         = price
-    data[:image]         = {}
-    data[:image][:thumb] = image.thumb.url
+    data[:mrp]           = mrp
+    data[:authors]       = authors
     data[:quality]       = quality
     data[:markings]      = markings
-    data[:edition]       = edition
     data[:torn]          = torn
     data[:sold]          = sold
-    data[:created_at]    = created_at
+    data[:created_at]    = created_at.try(:to_s)
+
+    data[:publication]   = publication.try(:name)
+
+    data[:image]         = {}
+    data[:image][:thumb] = image.try(:thumb).try(:url)
 
     data[:college]        = {}
     data[:college][:id]   = college.id
@@ -36,19 +45,13 @@ class Listing < ActiveRecord::Base
     data[:college][:abbr] = college.abbr
     data[:college][:city] = college.city
 
-    data[:user]                 = {}
-    data[:user][:id]            = user.id
-    data[:user][:name]          = user.name
-    data[:user][:mobile_number] = user.mobile_number
-    data[:user][:role]          = user.role
-
     data
   end
 
   private
 
+  before_create :set_college
   def set_college
     self.college = user.college
   end
-  before_create :set_college
 end

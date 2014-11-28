@@ -20,6 +20,6 @@ test:
   
 production:
   <<: *default
-  database: pajama_prod
+  database: hasstuff_prod
   username: bhushan
   password: bhushan
