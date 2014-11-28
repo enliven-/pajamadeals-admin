@@ -57,9 +57,9 @@ ActiveAdmin.register Order do
     column "Last Updated At", :updated_at
     column :created_at
     actions defaults: true do |order|
-      if !order.handler_assigned?
+      if order.order_placed?
         link_to 'Assign to Yourself', order_path(order, order: { handler_id: current_admin_user.id, status: 'handler assigned' } ), method: :put
-      else
+      elsif order.handler_assigned?
         link_to 'Unassign', order_path(order, order: { handler_id: nil, status: 'order placed' } ), method: :put
       end
     end

@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+body.active_admin {
+  .status_tag.blue { background: #63B8FF; }
+}
