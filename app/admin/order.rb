@@ -2,6 +2,14 @@ ActiveAdmin.register Order do
 
   controller do
     actions :all, except: [:destroy]
+    
+    def update
+      status = params[:order][:status]
+      order = Order.find(params[:id])
+      attribute = (status + ' at').gsub(/\s+/, '_').to_sym
+      params[:order][attribute] = Time.now if order.respond_to?(attribute)
+      super
+    end
   end
   
   index do    
@@ -46,5 +54,22 @@ ActiveAdmin.register Order do
   filter :handler
   filter :status, as: :select, collection: Order.statuses.keys
   filter :created_at
+  
+  form do |f|
+    f.inputs do 
+      f.input :status, as: :select, collection: Order.statuses.keys, include_blank: false
+      f.input :seller_meeting_at, as: :datetime_picker
+      f.input :buyer_meeting_at, as: :datetime_picker
+      f.input :item_picked_at, as: :datetime_picker
+      f.input :item_delivered_at, as: :datetime_picker
+    end
+    
+     f.inputs do 
+      f.input :payment_deposited
+      f.input :payment_deposited_at, as: :datetime_picker
+    end
+    
+    f.actions
+  end
 
 end
