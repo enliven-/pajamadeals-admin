@@ -12,19 +12,24 @@ ActiveAdmin.register Order do
     
     column(:status) do |record|
       case record.status
-      when 'created'
-        status_tag("created", "red")
-      when 'in_process'
-        status_tag("In process", "orange")
-      when 'completed'
-        status_tag("Completed" ,"ok")
+      when 'order placed'
+        status_tag("No Handler", "red")
+      when 'item delivered'
+        status_tag("completed" ,"ok")
       when 'cancelled'
         status_tag("cancelled")
+      else
+        status_tag(record.status, "orange")
       end
     end
     column :created_at
     
     actions
   end
+  
+  filter :college
+  filter :handler
+  filter :status, as: :select, collection: Order.statuses.keys
+  filter :created_at
 
 end
