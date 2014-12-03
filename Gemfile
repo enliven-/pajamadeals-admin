@@ -56,3 +56,4 @@ gem "capistrano-db-tasks", require: false
 
 gem 'rails_12factor'
 
+gem 'searchkick'

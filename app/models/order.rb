@@ -11,8 +11,8 @@ class Order < ActiveRecord::Base
                 "seller confirmed" => 2,
                 "buyer confirmed" =>  3,
                 "item picked" =>      4,
-                "payment pending" =>  5,
-                "item delivered" =>   6,
+                "item delivered" =>   5,
+                "payment pending" =>  6,
                 "order cancelled" =>  7
                }
 

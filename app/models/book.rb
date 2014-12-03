@@ -1,4 +1,6 @@
 class Book < ActiveRecord::Base
+  searchkick
+
   belongs_to :university
   belongs_to :college
   belongs_to :department

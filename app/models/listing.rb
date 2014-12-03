@@ -1,4 +1,6 @@
 class Listing < ActiveRecord::Base
+  default_scope { where(spam: false, deleted: false, sold: false) }
+
   belongs_to :user
   belongs_to :college
   belongs_to :book
@@ -16,8 +18,14 @@ class Listing < ActiveRecord::Base
   extend CarrierWave::Mount
   mount_uploader :image, ImageUploader
 
-  enum quality: { like_new: 0, average_used: 1, heavily_used: 2 }
-  enum markings: { no_markings: 0, few: 1, heavily_marked: 2 }
+  enum quality: { "like new" => 0,
+                  "fair" => 1,
+                  "heavily used" => 2 }
+  enum markings: { "no markings" => 0,
+                   "few markings" => 1,
+                   "heavily marked" => 2 }
+
+  scope :list, -> { where(spam: false) }
 
   def serialized_hash(options = {})
     data = {}
@@ -46,6 +54,25 @@ class Listing < ActiveRecord::Base
     data[:college][:city] = college.city
 
     data
+  end
+
+  # search
+
+  searchkick
+
+  def search_data
+    {
+      title:          title,
+      authors:        authors,
+      subject_name:   subject.name,
+      subject_id:     subject.id,
+      semester_id:    semester.id,
+      department_id:  department.id,
+      university_id:  college.university.id,
+      college_id:     college.id,
+      publication_id: publication.id,
+      spam: spam
+    }
   end
 
   private
