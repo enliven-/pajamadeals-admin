@@ -38,7 +38,6 @@ class Listing < ActiveRecord::Base
     data[:authors]       = authors
     data[:quality]       = quality
     data[:markings]      = markings
-    data[:torn]          = torn
     data[:sold]          = sold
     data[:created_at]    = created_at.try(:to_s)
 

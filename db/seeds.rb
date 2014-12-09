@@ -4,6 +4,8 @@ def sanitize(e)
   e.try(:strip).try(:titleize)
 end
 
+course = Course.create name: 'Bachelor of Engineering', abbr: 'BE'
+
 # upload books
 
 CSV.foreach("#{Rails.root}/db/book.csv", headers: true) do |row|
@@ -22,7 +24,9 @@ CSV.foreach("#{Rails.root}/db/book.csv", headers: true) do |row|
                      mrp: row[5].try(:strip),
                      department: department,
                      subject: subject,
-                     university: university
+                     university: university,
+                     course: Course.first,
+                     semester: semester
 
 end
 
@@ -30,7 +34,7 @@ CSV.foreach("#{Rails.root}/db/listing.csv", headers: true) do |row|
   p sanitize(row[0])
   
   if row[7].present?
-    college = College.find_or_create_by(name: sanitize(row[8]))
+    college = College.find_or_create_by(name: sanitize(row[8]), university: University.first)
     user = User.find_or_create_by(mobile: row[7].strip, college: college, name: sanitize(row[6]))
     if row[1].present? && user.present?
       listing = Listing.create book_id:  row[1].strip,
