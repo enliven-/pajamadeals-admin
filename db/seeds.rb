@@ -42,7 +42,7 @@ CSV.foreach("#{Rails.root}/db/listing.csv", headers: true) do |row|
                                edition:  sanitize(row[2]),
                                quality:  row[3].try(:strip).try(:to_i),
                                markings: row[4].try(:strip).try(:to_i),
-                               price:    ((row[5].try(:to_i) || 0)*0.55).to_s                     
+                               price:    ((row[5].try(:to_i) || 0)*0.55).round.to_s                     
      end
    end
 end
