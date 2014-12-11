@@ -10,6 +10,12 @@ set :repo_url, 'git@github.com:enliven-/pajamadeals-admin.git'
 set :deploy_via, 'copy'
 set :ssh_options, { forward_agent: true, port: 384 }
 
+set :rvm_ruby_version, '2.1.5@admin'
+
+set :bundle_path, nil
+set :bundle_binstubs, nil
+set :bundle_flags, '--system'
+
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
