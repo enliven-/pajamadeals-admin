@@ -35,9 +35,7 @@ class Order < ActiveRecord::Base
     data[:created_at]          = created_at.to_s
     data[:updated_at]          = updated_at.to_s
 
-    data[:listing]         = {}
-    data[:listing][:id]    = listing.id
-    data[:listing][:title] = listing.title
+    data[:listing] = listing.serialized_hash
 
     data
   end
