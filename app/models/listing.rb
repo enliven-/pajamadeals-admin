@@ -73,4 +73,9 @@ class Listing < ActiveRecord::Base
   def set_college
     self.college = user.college
   end
+
+  after_create :set_image
+  def set_image
+    self.image ||= book.images.first
+  end
 end

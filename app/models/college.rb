@@ -15,4 +15,15 @@ class College < ActiveRecord::Base
 
     data
   end
+
+  searchkick locations: ["location"]
+  def search_data
+    attributes.merge location: [latitude, longitude]
+  end
+
+  def nearest_colleges(distance = '1km')
+    College.search('*', where: { location: { near: [latitude, longitude],
+                                             within: distance }}).results
+  end
+
 end
