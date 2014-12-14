@@ -2,19 +2,20 @@ ActiveAdmin.register Listing do
   controller do
     actions :all, except: [:destroy]
   end
+ 
+  index do
+    column :id
+    column :book
+    column :edition
+    column :price
+    column :sold
+    column :spam
   
-  # See permitted parameters documentation:
-  # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-  #
-  # permit_params :list, :of, :attributes, :on, :model
-  #
-  # or
-  #
-  # permit_params do
-  #   permitted = [:permitted, :attributes]
-  #   permitted << :other if resource.something?
-  #   permitted
-  # end
-
-
+    
+    column "Image" do |listing|
+      image_tag(listing.image.file.thumb.url.try(:html_safe)) if listing.image
+    end
+    
+    actions
+  end
 end
