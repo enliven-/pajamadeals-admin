@@ -9,7 +9,6 @@ ActiveAdmin.register Book do
     column :publication
     column :semester
     column :department
-    column :college
     
     column "Images" do |m|
       m.images.map do |img|
@@ -31,7 +30,6 @@ ActiveAdmin.register Book do
       end
       f.input :publication
       f.input :university
-      f.input :college
       f.input :department
       f.input :course
       f.input :semester
