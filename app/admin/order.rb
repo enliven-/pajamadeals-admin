@@ -46,6 +46,10 @@ ActiveAdmin.register Order do
       line
     end
     
+    column "college" do |order|
+      order.college.abbr
+    end
+    
     column(:status) do |record|
       case record.status
       when 'order placed'
