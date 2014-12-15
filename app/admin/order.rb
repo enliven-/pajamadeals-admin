@@ -6,7 +6,11 @@ ActiveAdmin.register Order do
     actions :all, except: [:destroy, :new]
     
     def scoped_collection
-      Order.where(college_id: current_admin_user.college_id).where("status = ? OR handler_id = ?", 0, current_admin_user.id)
+      if current_admin_user.college_id.present?
+        Order.where(college_id: current_admin_user.college_id).where("status = ? OR handler_id = ?", 0, current_admin_user.id)
+      else
+        super
+      end
     end
 
     def update
