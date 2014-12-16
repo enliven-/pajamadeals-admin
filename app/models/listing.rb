@@ -41,7 +41,7 @@ class Listing < ActiveRecord::Base
     data[:publication]   = publication.try(:name)
 
     data[:image]         = {}
-    data[:image][:thumb] = image.try(:thumb).try(:url)
+    data[:image][:thumb] = image.try(:file).try(:thumb).try(:url)
 
     data[:college] = college.serialized_hash
 
@@ -63,7 +63,8 @@ class Listing < ActiveRecord::Base
       university_id:  college.university.id,
       college_id:     college.id,
       publication_id: publication.id,
-      spam: spam
+      spam:           spam,
+      created_at:     created_at
     }
   end
 
