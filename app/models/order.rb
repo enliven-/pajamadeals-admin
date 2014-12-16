@@ -50,4 +50,13 @@ class Order < ActiveRecord::Base
   def set_seller
     self.seller = listing.user
   end
+
+  after_save :set_listing_status
+  def set_listing_status
+    if cancelled?
+      listing.unsold!
+    elsif order_placed?
+      listing.sold!
+    end
+  end
 end

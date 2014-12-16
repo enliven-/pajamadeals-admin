@@ -1,5 +1,5 @@
 class Listing < ActiveRecord::Base
-  default_scope { where(spam: false, deleted: false, sold: false) }
+  #default_scope { where(spam: false, deleted: false, sold: false) }
 
   belongs_to :user
   belongs_to :college
@@ -22,7 +22,17 @@ class Listing < ActiveRecord::Base
                    "few markings" => 1,
                    "heavily marked" => 2 }
 
-  scope :list, -> { where(spam: false) }
+  scope :list, -> { where(spam: false, deleted: false, sold: false) }
+
+  def sold!
+    self.sold = true
+    save
+  end
+
+  def unsold!
+    self.sold = false
+    save
+  end
 
   def serialized_hash(options = {})
     data = {}
@@ -64,6 +74,8 @@ class Listing < ActiveRecord::Base
       college_id:     college.id,
       publication_id: publication.id,
       spam:           spam,
+      deleted:        deleted,
+      sold:           sold,
       created_at:     created_at
     }
   end
