@@ -12,7 +12,7 @@ class Listing < ActiveRecord::Base
   validates :user,    presence: true
   # validates :college, presence: true, on: :create
 
-  delegate :title, :authors, :mrp, :department, :semester, :subject,
+  delegate :title, :authors, :department, :semester, :subject,
            :publication, to: :book
 
   enum quality: { "like new" => 0,
