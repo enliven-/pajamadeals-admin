@@ -83,7 +83,9 @@ Rails.application.configure do
   }
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
+  
+  config.action_mailer.default_url_options = { host: "pajamadeals.in" }
 end
 
-Rails.application.routes.default_url_options[:host] = 'http://pajamadeals.in'
+Rails.application.routes.default_url_options[:host] = 'pajamadeals.in'
 
