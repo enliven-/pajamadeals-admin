@@ -50,7 +50,8 @@ CSV.foreach("#{Rails.root}/db/listing.csv", headers: true) do |row|
   next if !@listings.include?(row[0].to_i)
   
   listing = Listing.find row[0].to_i
-  listing.update_attribute :mrp, row[7].strip
+  #listing.update_attribute :mrp, row[7].strip
+  listing.update_attribute :price, listing.suggested_price
   # p sanitize(row[1])
 #
 #   if row[9].present? && row[2].present?

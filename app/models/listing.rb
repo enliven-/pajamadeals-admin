@@ -80,6 +80,13 @@ class Listing < ActiveRecord::Base
     }
   end
 
+  # pricing
+
+  def suggested_price
+    (mrp.to_i * (0.55 - (Listing.qualities[quality] * 0.025) -
+                  (Listing.markings[markings] * 0.025 ))).round
+  end
+
   private
 
   before_create :set_college
