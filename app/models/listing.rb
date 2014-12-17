@@ -83,8 +83,8 @@ class Listing < ActiveRecord::Base
   # pricing
 
   def suggested_price
-    (mrp.to_i * (0.55 - (Listing.qualities[quality] * 0.025) -
-                  (Listing.markings[markings] * 0.025 ))).round
+    (mrp.to_i * (0.55 - (Listing.qualities[quality] * 0.03) -
+                  (Listing.markings[markings] * 0.03))).round
   end
 
   private
