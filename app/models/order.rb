@@ -1,9 +1,10 @@
 class Order < ActiveRecord::Base
   belongs_to :listing
-  belongs_to :college
   belongs_to :seller,  class_name: 'User'
   belongs_to :buyer,   class_name: 'User'
   belongs_to :handler, class_name: 'AdminUser'
+  belongs_to :seller_college, class_name: 'College'
+  belongs_to :buyer_college, class_name: 'College'
 
   enum status: {
                 "order placed"     => 0,
@@ -41,14 +42,16 @@ class Order < ActiveRecord::Base
   end
 
   private
-  before_create :set_college
-  def set_college
-    self.college = listing.college
-  end
-
+  
   before_create :set_seller
   def set_seller
     self.seller = listing.user
+  end
+  
+  before_create :set_college
+  def set_college
+    self.seller_college = listing.college
+    self.buyer_college =  buyer.college
   end
 
   after_save :set_listing_status

@@ -5,13 +5,15 @@ ActiveAdmin.register Order do
   controller do
     actions :all, except: [:destroy, :new]
     
-    def scoped_collection
-      if current_admin_user.college_id.present?
-        Order.where(college_id: current_admin_user.college_id).where("status = ? OR handler_id = ?", 0, current_admin_user.id)
-      else
-        super
-      end
-    end
+    # def scoped_collection
+#       if current_admin_user.college_id.present?
+#         Order.where("seller_college_id = ? OR buyer_college_id = ?",
+#                     current_admin_user.college_id, current_admin_user.college_id)
+#              .where("status = ? OR handler_id = ?", 0, current_admin_user.id)
+#       else
+#         super
+#       end
+#     end
 
     def update
       status = params[:order][:status]
@@ -39,17 +41,18 @@ ActiveAdmin.register Order do
       line += content_tag(:div) { "+91 " + order.seller.mobile }
       line
     end
+    column "Seller college" do |order|
+      order.seller_college.abbr
+    end
     column "Buyer" do |order|
       line = ''.html_safe
       line += content_tag(:div) { link_to order.buyer.name, user_path(order.buyer) }
       line += content_tag(:div) { "+91 " + order.buyer.mobile }
       line
     end
-    
-    column "college" do |order|
-      order.college.abbr
+    column "Buyer college" do |order|
+      order.buyer_college.abbr
     end
-    
     column(:status) do |record|
       case record.status
       when 'order placed'
