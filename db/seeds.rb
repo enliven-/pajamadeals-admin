@@ -47,22 +47,29 @@ end
 # end
 # #
 CSV.foreach("#{Rails.root}/db/listing.csv", headers: true) do |row|
-  next if !@listings.include?(row[0].to_i)
-  
-  listing = Listing.find row[0].to_i
-  #listing.update_attribute :mrp, row[7].strip
-  listing.update_attribute :price, listing.suggested_price
-  # p sanitize(row[1])
+  # next if @listings.include?(row[0].to_i)
 #
 #   if row[9].present? && row[2].present?
 #     college = College.find_or_create_by(name: sanitize(row[10]), university: University.first)
 #     user = User.find_or_create_by(mobile: row[9].strip, college: college, name: sanitize(row[8]))
-#     listing = Listing.create id: row[0].strip.to_i,
-#                              book_id:  row[2].strip,
-#                              user:     user,
-#                              edition:  sanitize(row[3]),
-#                              quality:  row[4].try(:strip).try(:to_i),
-#                              markings: row[5].try(:strip).try(:to_i),
-#                              price:    ((row[7].try(:to_i) || 0)*0.50).round.to_s
+#     book = Book.find row[2].to_i
+#
+#     mrp = row[7].present? ? row[7].strip : book.mrp
+#
+#     listing = Listing.new id: row[0].strip.to_i,
+#                           book_id:  row[2].strip,
+#                           user:     user,
+#                           edition:  sanitize(row[3]),
+#                           quality:  row[4].try(:strip).try(:to_i),
+#                           markings: row[5].try(:strip).try(:to_i),
+#                           mrp:      mrp
+#
+#     listing.price = listing.suggested_price
+#
+#     if listing.save
+#       listing.save
+#     else
+#       puts "#{listing.id}, #{listing.errors.messages}".inspect
+#     end
 #    end
 end

@@ -5,10 +5,10 @@ ID,Title,Book id,Edition,Quality         0-new          1-fair             2-hea
 5,Engg Maths I,,2nd ,1,1,,500,Sonika Raghuwanshi,8149361140,Cummins College of Engg,Aishwarya Awasthi,,
 6,Engg graphics,,2nd,1,1,,445,Sonika Raghuwanshi,8149361140,Cummins College of Engg,Aishwarya Awasthi,,
 7,Civil,,11th,1,1,,285,Sonika Raghuwanshi,8149361140,Cummins College of Engg,Aishwarya Awasthi,,
-8,Strength of materials,,1st,0,0,,495,Anjali Pandey,9957062482,Cummins College of Engg,Aishwarya Awasthi,,
-9,Theory of machines I,,1st,0,0,,,Anjali Pandey,9957062482,Cummins College of Engg,Aishwarya Awasthi,,
-10,Electronics and electrical engg,,1st,0,0,,280,Anjali Pandey,9957062482,Cummins College of Engg,Aishwarya Awasthi,,
-11,Engg metallurgy,,1st,0,0,,285,Anjali Pandey,9957062482,Cummins College of Engg,Aishwarya Awasthi,,
+8,Strength of materials,45,1st,0,0,,565,Anjali Pandey,9957062482,Cummins College of Engg,Aishwarya Awasthi,,
+9,Theory of machines I,56,1st,0,0,,495,Anjali Pandey,9957062482,Cummins College of Engg,Aishwarya Awasthi,,
+10,Electronics and electrical engg,53,1st,0,0,,280,Anjali Pandey,9957062482,Cummins College of Engg,Aishwarya Awasthi,,
+11,Engg metallurgy,55,1st,0,0,,285,Anjali Pandey,9957062482,Cummins College of Engg,Aishwarya Awasthi,,
 12,Applied thermo,,1st,0,0,,425,Anjali Pandey,9957062482,Cummins College of Engg,Aishwarya Awasthi,,
 13,Engineering Drawing ,305,1st edition (Reference),1,1,,200,Aishwaya Oza,9545800450,Cummins College of Engg,Anisha,ok,50%
 14,Physics,164,1st edition,0,1,,285,Pratima Lunkad,8149131818,Cummins College of Engg,Anisha,ok,60
@@ -80,23 +80,23 @@ ID,Title,Book id,Edition,Quality         0-new          1-fair             2-hea
 80,Network Theory,307,1st edition,0,1,,, Isha Arun,8600251490,Cummins College of Engg,Shraddha Babar,ok,60
 81,Signal and Systems,91,1st edition,1,1,,, Isha Arun,8600251490,Cummins College of Engg,Shraddha Babar,ok,60
 82,Basic Mechanical Engineering,182,1st edition,1,1,,365,Varsha Nemane,9922158239,Cummins College of Engg.,Aishwarya Awasthi,good,65
-83,Fundamentals of Programming Language 2,,1st edition,1,1,,265,Varsha Nemane,9922158239,Cummins College of Engg.,Aishwarya Awasthi,good,65
-84,Material science,,1st edition,1,1,,325,Varsha Nemane,9922158239,Cummins College of Engg.,Aishwarya Awasthi,good,65
-85,Manufacturing process-I,,1st edition,1,1,,325,Varsha Nemane,9922158239,Cummins College of Engg.,Aishwarya Awasthi,good,65
-86,Fluid Mechanics,,1st edition,1,1,,435,Varsha Nemane,9922158239,Cummins College of Engg.,Aishwarya Awasthi,good,65
-87,Engineering mathematics - III,,1st edition,1,1,,550,Varsha Nemane,9922158239,Cummins College of Engg.,Aishwarya Awasthi,good,65
-88,Theory of Machines I,56,1st edition,1,1,,595,Varsha Nemane,9922158239,Cummins College of Engg.,Aishwarya Awasthi,good,65
-89,Thermodynamics,,1st edition,1,1,,425,Varsha Nemane,9922158239,Cummins College of Engg.,Aishwarya Awasthi,good,65
+83,Fundamentals of Programming Language 2,168,1st edition,1,1,,265,Varsha Nemane,9922158239,Cummins College of Engg.,Aishwarya Awasthi,good,65
+84,Material science,58,1st edition,1,1,,325,Varsha Nemane,9922158239,Cummins College of Engg.,Aishwarya Awasthi,good,65
+85,Manufacturing process-I,59,1st edition,1,1,,325,Varsha Nemane,9922158239,Cummins College of Engg.,Aishwarya Awasthi,good,65
+86,Fluid Mechanics,40,1st edition,1,1,,435,Varsha Nemane,9922158239,Cummins College of Engg.,Aishwarya Awasthi,good,65
+87,Engineering mathematics - III,37,1st edition,1,1,,550,Varsha Nemane,9922158239,Cummins College of Engg.,Aishwarya Awasthi,good,65
+88,Theory of Machines I,42,1st edition,1,1,,595,Varsha Nemane,9922158239,Cummins College of Engg.,Aishwarya Awasthi,good,65
+89,Thermodynamics,44,1st edition,1,1,,425,Varsha Nemane,9922158239,Cummins College of Engg.,Aishwarya Awasthi,good,65
 90,Electronics and electrical engineering,46,1st edition,0,0,,280,Aishwarya Awasthi,9975065529,Cummins College of Engg.,Aishwarya Awasthi,bad,50
 91,Engineering metallurgy,43,1st edition,0,0,,285,Aishwarya Awasthi,9975065529,Cummins College of Engg.,Aishwarya Awasthi,bad,50
 92,Applied Thermodynamics,44,1st edition,0,0,,425,Aishwarya Awasthi,9975065529,Cummins College of Engg.,Aishwarya Awasthi,bad,50
 93,Theory of Machines I,56,1st edition,0,0,,495,Aishwarya Awasthi,9975065529,Cummins College of Engg.,Aishwarya Awasthi,bad,50
 94,Strength of Material,45,1st edition,0,0,,565,Aishwarya Awasthi,9975065529,Cummins College of Engg.,Aishwarya Awasthi,bad,50
-95,Engineering mathematics III,,2nd rev edition,0,0,,550,Roocha Divate,9673996599,Cummins College of Engg.,Aishwarya Awasthi,,
-96,Material science,,2013 edition,0,0,,325,Roocha Divate,9673996599,Cummins College of Engg.,Aishwarya Awasthi,,
-97,Fluid Mechanics,,2013 edition,0,0,,435,Roocha Divate,9673996599,Cummins College of Engg.,Aishwarya Awasthi,,
-98,Manufacturing process-I,,2013 edition,0,0,,325,Roocha Divate,9673996599,Cummins College of Engg.,Aishwarya Awasthi,,
-99,Thermodynamics,,2013 edition,0,0,,425,Roocha Divate,9673996599,Cummins College of Engg.,Aishwarya Awasthi,,
+95,Engineering mathematics III,37,2nd rev edition,0,0,,550,Roocha Divate,9673996599,Cummins College of Engg.,Aishwarya Awasthi,,
+96,Material science,58,2013 edition,0,0,,325,Roocha Divate,9673996599,Cummins College of Engg.,Aishwarya Awasthi,,
+97,Fluid Mechanics,40,2013 edition,0,0,,435,Roocha Divate,9673996599,Cummins College of Engg.,Aishwarya Awasthi,,
+98,Manufacturing process-I,59,2013 edition,0,0,,325,Roocha Divate,9673996599,Cummins College of Engg.,Aishwarya Awasthi,,
+99,Thermodynamics,44,2013 edition,0,0,,425,Roocha Divate,9673996599,Cummins College of Engg.,Aishwarya Awasthi,,
 100,Engineering Graphics I,,3rd rev edition,1,1,,495,Snehal Gunja,9028820289,Cummins College of Engg.,Aishwarya Awasthi,,
 101,FPL I,,3rd rev ,1,1,,285,Snehal Gunja,9028820289,Cummins College of Engg.,Aishwarya Awasthi,,
 102,Civil,,12th rev,1,1,,325,Snehal Gunja,9028820289,Cummins College of Engg.,Aishwarya Awasthi,,
@@ -105,16 +105,16 @@ ID,Title,Book id,Edition,Quality         0-new          1-fair             2-hea
 105,Chemistry,,9th edition,1,1,,410,Snehal Gunja,9028820289,Cummins College of Engg.,Aishwarya Awasthi,,
 106,Strength of Material,45,1st edition,0,0,,565,Meghna Sarkar,7709299702,Cummins College of Engg.,Aishwarya Awasthi,,
 107,Applied Thermodynamics,44,1st edition,0,0,,425,Meghna Sarkar,7709299702,Cummins College of Engg.,Aishwarya Awasthi,,
-108,Engineering metallurgy,,1st edition,0,0,,285,Meghna Sarkar,7709299702,Cummins College of Engg.,Aishwarya Awasthi,,
+108,Engineering metallurgy,55,1st edition,0,0,,285,Meghna Sarkar,7709299702,Cummins College of Engg.,Aishwarya Awasthi,,
 109,Electronics and electrical engineering,46,1st edition,0,0,,280,Meghna Sarkar,7709299702,Cummins College of Engg.,Aishwarya Awasthi,,
 110,Theory of Machines I,56,1st edition,0,0,,495,Meghna Sarkar,7709299702,Cummins College of Engg.,Aishwarya Awasthi,,
-111,discrete structure,,1st edition,1,1,,525,Arushi Kaul,9922982468,Cummins College of Engg.,Aishwarya Awasthi,,
+111,discrete structure,97,1st edition,1,1,,525,Arushi Kaul,9922982468,Cummins College of Engg.,Aishwarya Awasthi,,
 112,Computer organisations,,1st edition,1,1,,365,Arushi Kaul,9922982468,Cummins College of Engg.,Aishwarya Awasthi,,
-113,Processor architecture and interface,,1st edition,1,1,,595,Arushi Kaul,9922982468,Cummins College of Engg.,Aishwarya Awasthi,,
+113,Processor architecture and interface,283,1st edition,1,1,,595,Arushi Kaul,9922982468,Cummins College of Engg.,Aishwarya Awasthi,,
 114,Engineering mathematics I,,1st edition,2,2,,450,Revati Kulkarni,8087964177,Cummins College of Engg.,Aishwarya Awasthi,,
 115,Civil,,10th edition,1,1,,265,Revati Kulkarni,8087964177,Cummins College of Engg.,Aishwarya Awasthi,,
 116,Engineering Graphics I,,1st edition,2,2,,365,Revati Kulkarni,8087964177,Cummins College of Engg.,Aishwarya Awasthi,,
-117,FPL I,,1st edition,2,2,,195,Revati Kulkarni,8087964177,Cummins College of Engg.,Aishwarya Awasthi,,
+117,Applied Thermodynamics,,1st edition,2,2,,195,Revati Kulkarni,8087964177,Cummins College of Engg.,Aishwarya Awasthi,,
 118,Electrical,,1st edition,2,2,,315,Revati Kulkarni,8087964177,Cummins College of Engg.,Aishwarya Awasthi,,
 119,Physics,,1st edition,2,2,,285,Revati Kulkarni,8087964177,Cummins College of Engg.,Aishwarya Awasthi,,
 120,Engineering mathematics I,,1st edition,1,1,,395,Shravani Kulthe,8007119109,Cummins College of Engg.,Aishwarya Awasthi,,
@@ -243,10 +243,10 @@ ID,Title,Book id,Edition,Quality         0-new          1-fair             2-hea
 243,Computer Organizations,120,1st edition,1,1,,365,Takshashila Zanjurane,8275928660,Cummins College of Engg.,Shraddha Babar,good,60
 244,Microprocessor and Interfacing Techniques,118,1st edition,2,1,,595,Takshashila Zanjurane,8275928660,Cummins College of Engg.,Shraddha Babar,good,60
 245,Engineering Mathematics 3,132,1st edition,1,1,,500,Takshashila Zanjurane,8275928660,Cummins College of Engg.,Shraddha Babar,good,60
-246,Theory of Machines I,56,,1,1,,,Shyamali Boob,9860066211,Cummins College of Engg.,Shraddha Babar,ok,60
-247,Engineering Metallurgy,55,1st edition,0,1,,,Shyamali Boob,9860066211,Cummins College of Engg.,Shraddha Babar,ok,60
-248,Strength of Material,45,,1,0,,,Shyamali Boob,9860066211,Cummins College of Engg.,Shraddha Babar,ok,60
-249,Electronics and Electrical Engg,53,1st edition,0,1,,,Shyamali Boob,9860066211,Cummins College of Engg.,Shraddha Babar,ok,60
+246,Theory of Machines I,56,1st edition,1,1,,495,Shyamali Boob,9860066211,Cummins College of Engg.,Shraddha Babar,ok,60
+247,Engineering Metallurgy,55,1st edition,0,1,,285,Shyamali Boob,9860066211,Cummins College of Engg.,Shraddha Babar,ok,60
+248,Strength of Material,45,1st edition,1,0,,565,Shyamali Boob,9860066211,Cummins College of Engg.,Shraddha Babar,ok,60
+249,Electronics and Electrical Engg,53,1st edition,0,1,,280,Shyamali Boob,9860066211,Cummins College of Engg.,Shraddha Babar,ok,60
 250,Applied Thermodynamics,44,1st edition,1,1,,425,Shyamali Boob,9860066211,Cummins College of Engg.,Shraddha Babar,ok,60
 251,Microcontroller And Applications,108,1st edition,0,0,,485,Sheetal,9405603480,Cummins College of engg.,Swamini Kulkarni,ok,60%
 252,Elecromagnetic And Transmission lines,106,1st edition,0,0,,495,Sheetal,9405603480,Cummins College of engg.,Swamini Kulkarni,ok,60%
@@ -386,27 +386,51 @@ ID,Title,Book id,Edition,Quality         0-new          1-fair             2-hea
 386,Engineering Mechanics,165,1st edition,1,2,,635,Vedantini Bogawat,9850991735,"MITCOE, Pune",Geet Pradhan,ok,60
 387,Basic Mechanical Engineering,169,1st edition,2,2,,365,Vedantini Bogawat,9850991735,"MITCOE, Pune",Geet Pradhan,ok,60
 388,Fundamentals of Programming Language 2,168,2nd revised edition,1,1,,300,Vedantini Bogawat,9850991735,"MITCOE, Pune",Geet Pradhan,ok,60
-389,Basic Mechanical engineering,169,1st edition,0,0,,365,Divya Shah,9689992311,"PVG,college of engg.",Swamini Kulkarni,Ok,50%
-390,Engineering Mathematics 2,186,1st edition,0,0,,500,Divya Shah,9689992311,"PVG,college of engg.",Swamini Kulkarni,Ok,50%
-391,Engineering Chemistry,163,,2,1,,335,Kushagra Pandey,9552590973,Sinhagad College of Engineering,Geet Pradhan,,
-392,Basic Mechanical engineering,182,,1,0,,260,Kushagra Pandey,9552590973,Sinhagad College of Engineering,Geet Pradhan,,
-393,Engineering Mathematics 2,186,,0,0,,500,Kushagra Pandey,9552590973,Sinhagad College of Engineering,Geet Pradhan,,
-394,Engineering Mechanics,,,1,1,,499,Kushagra Pandey,9552590973,Sinhagad College of Engineering,Geet Pradhan,,
-395,Funamentals of programming language 2,168,,1,0,,265,Kushagra Pandey,9552590973,Sinhagad College of Engineering,Geet Pradhan,,
-396,Basic Mechanical Engineering,182,1st Edition,1,1,,260,Aditya Sawant,9881538555,Smt Kashibai Navale coe (sinhgad),Geet Pradhan,,
-397,Engineering Physics,184,3rd Edition(revised),1,1,,260,Aditya Sawant,9881538555,Smt Kashibai Navale coe (sinhgad),Geet Pradhan,,
-398,Strength of Material,,1st,0,0,,565,Kranti Garatkar,9970054355,Cummins College of engg.,Aishwarya Awasthi,,
-399,Engg metallurgy,,1st,0,0,,285,Kranti Garatkar,9970054355,Cummins College of engg.,Aishwarya Awasthi,,
-400,Electronics and Electrical Engg,,1st,0,0,,280,Kranti Garatkar,9970054355,Cummins College of engg.,Aishwarya Awasthi,,
-401,Applied Thermodynamics,,1st,0,0,,425,Kranti Garatkar,9970054355,Cummins College of engg.,Aishwarya Awasthi,,
-402,Theory of Machines I,,1st,0,0,,495,Kranti Garatkar,9970054355,Cummins College of engg.,Aishwarya Awasthi,,
-403,Electrical and Electronic Technology,,10,0,0,,699,Kaustubh Kale,9545463023,"VIT, Pune",Swapnil Maheshwari,didnt sell at ABC,
-404,Engineering Mechanics,,4,2,1,,635,Kaustubh Kale,9545463023,"VIT, Pune",Swapnil Maheshwari,didnt sell at ABC,
-405,Engineering Graphics,,,1,0,,365,Kaustubh Kale,9545463023,"VIT, Pune",Swapnil Maheshwari,didnt sell at ABC,
-406,Engineering Chemistry,,15,0,0,,375,Kaustubh Kale,9545463023,"VIT, Pune",Swapnil Maheshwari,didnt sell at ABC,
-407,Engineering Mathematics,,,0,0,,500,Kaustubh Kale,9545463023,"VIT, Pune",Swapnil Maheshwari,didnt sell at ABC,
-408,Thermal Engineering,,1,0,0,,600,Kaustubh Kale,9545463023,"VIT, Pune",Swapnil Maheshwari,didnt sell at ABC,
-409,Theory of Machines I,,3,0,0,,,Kaustubh Kale,9545463023,"VIT, Pune",Swapnil Maheshwari,didnt sell at ABC,
-410,Engineering Physics,,8,0,0,,285,Kaustubh Kale,9545463023,"VIT, Pune",Swapnil Maheshwari,didnt sell at ABC,
-411,Digital Signal processing,,14,1,1,,,Junaid Charaniya,7507245143,"VIT, Pune",Swapnil Maheshwari,didnt sell at ABC,
-412,Electronics Devices and Circuits,,,0,0,,150,Junaid Charaniya,7507245143,"VIT, Pune",Swapnil Maheshwari,didnt sell at ABC,
+407,Basic Mechanical engineering,169,1st edition,0,0,,365,Divya Shah,9689992311,"PVG,college of engg.",Swamini Kulkarni,Ok,50%
+408,Engineering Mathematics 2,186,1st edition,0,0,,500,Divya Shah,9689992311,"PVG,college of engg.",Swamini Kulkarni,Ok,50%
+409,Engineering Chemistry,163,,2,1,,335,Kushagra Pandey,9552590973,Sinhagad College of Engineering,Geet Pradhan,,
+410,Basic Mechanical engineering,182,,1,0,,260,Kushagra Pandey,9552590973,Sinhagad College of Engineering,Geet Pradhan,,
+411,Engineering Mathematics 2,186,,0,0,,500,Kushagra Pandey,9552590973,Sinhagad College of Engineering,Geet Pradhan,,
+412,Engineering Mechanics,,,1,1,,499,Kushagra Pandey,9552590973,Sinhagad College of Engineering,Geet Pradhan,,
+413,Funamentals of programming language 2,168,,1,0,,265,Kushagra Pandey,9552590973,Sinhagad College of Engineering,Geet Pradhan,,
+414,Basic Mechanical Engineering,182,1st Edition,1,1,,260,Aditya Sawant,9881538555,Smt Kashibai Navale coe (sinhgad),Geet Pradhan,,
+415,Engineering Physics,184,3rd Edition(revised),1,1,,260,Aditya Sawant,9881538555,Smt Kashibai Navale coe (sinhgad),Geet Pradhan,,
+416,Strength of Material,45,1st,0,0,,565,Kranti Garatkar,9970054355,Cummins College of engg.,Aishwarya Awasthi,,
+417,Engg metallurgy,55,1st,0,0,,285,Kranti Garatkar,9970054355,Cummins College of engg.,Aishwarya Awasthi,,
+418,Electronics and Electrical Engg,53,1st,0,0,,280,Kranti Garatkar,9970054355,Cummins College of engg.,Aishwarya Awasthi,,
+419,Applied Thermodynamics,44,1st,0,0,,425,Kranti Garatkar,9970054355,Cummins College of engg.,Aishwarya Awasthi,,
+420,Theory of Machines I,56,1st,0,0,,495,Kranti Garatkar,9970054355,Cummins College of engg.,Aishwarya Awasthi,,
+421,Electrical and Electronic Technology,323,10,0,0,,699,Kaustubh Kale,9545463023,"VIT, Pune",Swapnil Maheshwari,didnt sell at ABC,
+422,Engineering Mechanics,165,4,2,1,,635,Kaustubh Kale,9545463023,"VIT, Pune",Swapnil Maheshwari,didnt sell at ABC,
+423,Engineering Graphics,162,,1,0,,365,Kaustubh Kale,9545463023,"VIT, Pune",Swapnil Maheshwari,didnt sell at ABC,
+424,Engineering Chemistry,314,15,0,0,,375,Kaustubh Kale,9545463023,"VIT, Pune",Swapnil Maheshwari,didnt sell at ABC,
+425,Engineering Mathematics,186,,0,0,,500,Kaustubh Kale,9545463023,"VIT, Pune",Swapnil Maheshwari,didnt sell at ABC,
+426,Thermal Engineering,315,1,0,0,,600,Kaustubh Kale,9545463023,"VIT, Pune",Swapnil Maheshwari,didnt sell at ABC,
+427,Theory of Machines I,139,3,0,0,,,Kaustubh Kale,9545463023,"VIT, Pune",Swapnil Maheshwari,didnt sell at ABC,
+428,Engineering Physics,316,8,0,0,,285,Kaustubh Kale,9545463023,"VIT, Pune",Swapnil Maheshwari,didnt sell at ABC,
+429,Digital Signal processing,317,14,1,1,,,Junaid Charaniya,7507245143,"VIT, Pune",Swapnil Maheshwari,didnt sell at ABC,
+430,Electronics Devices and Circuits,318,,0,0,,150,Junaid Charaniya,7507245143,"VIT, Pune",Swapnil Maheshwari,didnt sell at ABC,
+431,Computer Graphics,119,2,1,0,,235,Raunak Dungarwal,9422226904,"VIT, Pune",Swapnil Maheshwari,bad,
+432,Digital Electronics & Logic Design,274,,2,2,,495,Raunak Dungarwal,9422226904,"VIT, Pune",Swapnil Maheshwari,bad,
+433,Engineering Mechanics,165,,1,1,,635,Priyanka Zurale,9822963331,"VIT, Pune",Swapnil Maheshwari,ok,
+434,Electrical and Electronic Technology I,319,,1,1,,,Priyanka Zurale,9822963331,"VIT, Pune",Swapnil Maheshwari,ok,
+435,Electrical and Electronic Technology II,320,,1,1,,,Priyanka Zurale,9822963331,"VIT, Pune",Swapnil Maheshwari,ok,
+436,Electronic Instrumentation and Measurement Techniques,7,,1,1,,350,Aishwarya Boralkar,9673177798,"VIT, Pune",Swapnil Maheshwari,,
+437,Manufacturing Process I,321,,0,0,,450,Yash Kale,9503134222,"VIT, Pune",Swapnil Maheshwari,bad,
+438,Manufacturing Process II,322,,0,0,,450,Yash Kale,9503134222,"VIT, Pune",Swapnil Maheshwari,bad,
+439,Analog and Digital Electronics,226,,,,,405,Aakash Balani,9637736299,"VIT, Pune",Swapnil Maheshwari,didnt sell in abc,
+440,Engineering Mechanics,165,,1,1,,635,Ujwal Juneja,8976220629,"VIT,Pune",Swapnil Maheshwari,,
+441,Fundamentals of Programming Language -1,167,,1,1,,295,Ujwal Juneja,8976220629,"VIT,Pune",Swapnil Maheshwari,,
+442,Analog and Digital Electronics,226,,1,1,,405,Chinmay Kulkarni,9890924934,"VIT,Pune",Swapnil Maheshwari,,
+443,Digital Electronics and Logic Design,274,,1,0,,505,Chinmay Kulkarni,9890924934,"VIT,Pune",Swapnil Maheshwari,,
+444,Advanced Engineering Mathematics,327,,0,0,,,Chinmay Kulkarni,9890924934,"VIT,Pune",Swapnil Maheshwari,,
+445,Aula 1,325,,1,1,,,Shantanu Purandare,8149959160,"VIT,Pune",Swapnil Maheshwari,,
+446,Let Us C,143,,1,1,,240,Shantanu Purandare,8149959160,"VIT,Pune",Swapnil Maheshwari,,
+447,German,326,,1,1,,,Shubham Honkhambe,9423040781,"VIT,Pune",Swapnil Maheshwari,,
+448,Elecronics and Electrical Engg,46,1st edition,1,0,,495,Sneha Patil,8806537003,Cummins College of Engg,Shraddha Babar,didn't sell in abc,
+449,Engineering metallurgy,55,1st edition,0,0,,285,Sneha Patil,8806537003,Cummins College of Engg,Shraddha Babar,didn't sell in abc,
+450,Strength of Material,45,1st edition,1,1,,565,Sneha Patil,8806537003,Cummins College of Engg,Shraddha Babar,didn't sell in abc,
+451,Theory of machines 1,42,1st edition,0,0,,595,Sneha Patil,8806537003,Cummins College of Engg,Shraddha Babar,didn't sell in abc,
+452,Applied thermodynamics,44,1st edition,0,0,,425,Sneha Patil,8806537003,Cummins College of Engg,Shraddha Babar,didn't sell in abc,
+453,Digital Electronics and Logic Design,274,,,,,505,Aakash Balani,9637736299,"VIT,Pune",Swapnil Maheshwari,didn't sell in abc,
+454,Digital Electronics,328,,,,,,Aakash Balani,9637736299,"VIT,Pune",Swapnil Maheshwari,didn't sell in abc,
