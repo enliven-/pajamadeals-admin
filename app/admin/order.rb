@@ -28,7 +28,8 @@ ActiveAdmin.register Order do
     end
   end
   
-  index do    
+  index do
+    column :id   
     column "Listing" do |order|
       line = ''.html_safe
       line += content_tag(:div) { link_to order.listing.title, listing_path(order.listing) }
@@ -65,6 +66,7 @@ ActiveAdmin.register Order do
         status_tag(record.status, "orange")
       end
     end
+    column :handler
     column "Last Updated At", :updated_at
     column :created_at
     actions defaults: true do |order|
