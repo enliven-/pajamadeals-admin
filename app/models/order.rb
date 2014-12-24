@@ -41,7 +41,7 @@ class Order < ActiveRecord::Base
     data
   end
 
-  private
+  #private
   
   before_create :set_seller
   def set_seller
@@ -61,5 +61,90 @@ class Order < ActiveRecord::Base
     elsif order_placed?
       listing.sold!
     end
+  end
+  
+  after_create :send_notification_to_buyer
+  def send_notification_to_buyer
+      merge_vars = [
+            { name: "name",                content: buyer.name },
+            { name: "mobile",              content: buyer.mobile },
+            { name: "listing_title",       content: listing.title },
+            { name: "listing_publication", content: listing.publication_name },
+            { name: "listing_price",       content: listing.price },
+            { name: "transaction_cost",    content: App.transaction_cost }
+          ]
+    
+      mandrill = Mandrill::API.new ENV['MANDRILL_APIKEY']
+      template_name = "order_notification_for_buyer"
+      template_content = []
+      message = {
+       "from_email"=>"people@pajamadeals.in",
+       "from_name"=>"Pajamadeals",
+       "to"=>
+          [{"email"=>"people@pajamadeals.in",
+              "name"=>"Recipient Name",
+              "type"=>"to"}],
+       "headers"=>{"Reply-To"=>"people@pajamadeals.in"},
+       "important"=>false,
+       "track_opens"=>nil,
+       "track_clicks"=>nil,
+       "auto_text"=>nil,
+       "auto_html"=>nil,
+       "inline_css"=>nil,
+       "url_strip_qs"=>nil,
+       "preserve_recipients"=>nil,
+       "view_content_link"=>nil,
+       "tracking_domain"=>nil,
+       "signing_domain"=>nil,
+       "return_path_domain"=>nil,
+       "merge"=>true,
+       "global_merge_vars"=> merge_vars
+      }
+
+      result = mandrill.messages.send_template template_name, template_content,
+                                               message
+      result.first["status"]
+  end
+  
+  after_create :send_notification_to_seller
+  def send_notification_to_seller
+      merge_vars = [
+            { name: "name",                content: seller.name },
+            { name: "mobile",              content: seller.mobile },
+            { name: "listing_title",       content: listing.title },
+            { name: "listing_publication", content: listing.publication_name },
+            { name: "listing_price",       content: listing.price }
+          ]
+    
+      mandrill = Mandrill::API.new ENV['MANDRILL_APIKEY']
+      template_name = "order_notification_for_seller"
+      template_content = []
+      message = {
+       "from_email"=>"people@pajamadeals.in",
+       "from_name"=>"Pajamadeals",
+       "to"=>
+          [{"email"=>"people@pajamadeals.in",
+              "name"=>"Recipient Name",
+              "type"=>"to"}],
+       "headers"=>{"Reply-To"=>"people@pajamadeals.in"},
+       "important"=>false,
+       "track_opens"=>nil,
+       "track_clicks"=>nil,
+       "auto_text"=>nil,
+       "auto_html"=>nil,
+       "inline_css"=>nil,
+       "url_strip_qs"=>nil,
+       "preserve_recipients"=>nil,
+       "view_content_link"=>nil,
+       "tracking_domain"=>nil,
+       "signing_domain"=>nil,
+       "return_path_domain"=>nil,
+       "merge"=>true,
+       "global_merge_vars"=> merge_vars
+      }
+
+      result = mandrill.messages.send_template template_name, template_content,
+                                               message
+      result.first["status"]
   end
 end

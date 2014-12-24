@@ -86,6 +86,10 @@ class Listing < ActiveRecord::Base
     (mrp.to_i * (0.55 - (Listing.qualities[quality] * 0.03) -
                   (Listing.markings[markings] * 0.03))).round
   end
+  
+  def publication_name
+    publication.try(:name)
+  end
 
   private
 
@@ -98,4 +102,46 @@ class Listing < ActiveRecord::Base
   def set_image
     self.image ||= book.images.first
   end
+  
+  after_create :send_notification
+  def send_notification
+      merge_vars = [
+            { name: "name",                content: user.name },
+            { name: "mobile",              content: user.mobile },
+            { name: "listing_title",       content: title },
+            { name: "listing_publication", content: publication_name },
+            { name: "listing_price",       content: price }
+          ]
+      mandrill = Mandrill::API.new ENV['MANDRILL_APIKEY']
+      template_name = "create_listing_notification"
+      template_content = []
+      message = {
+       "from_email"=>"people@pajamadeals.in",
+       "from_name"=>"Pajamadeals",
+       "to"=>
+          [{"email"=>"people@pajamadeals.in",
+              "name"=> user.name,
+              "type"=>"to"}],
+       "headers"=>{"Reply-To"=>"people@pajamadeals.in"},
+       "important"=>false,
+       "track_opens"=>nil,
+       "track_clicks"=>nil,
+       "auto_text"=>nil,
+       "auto_html"=>nil,
+       "inline_css"=>nil,
+       "url_strip_qs"=>nil,
+       "preserve_recipients"=>nil,
+       "view_content_link"=>nil,
+       "tracking_domain"=>nil,
+       "signing_domain"=>nil,
+       "return_path_domain"=>nil,
+       "merge"=>true,
+       "global_merge_vars" => merge_vars
+      }
+
+      result = mandrill.messages.send_template template_name, template_content,
+                                               message
+      result.first["status"]
+  end
+  
 end
